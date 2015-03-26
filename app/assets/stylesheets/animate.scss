@@ -5,77 +5,93 @@
 
 body{
   background: url('TheSky.png');
-  z-index: -2;
+  z-index: -50;
+}
+
+.wrapper{
+  width: 50%;
+}
+
+.body{
+  width: 100%;
+  height: 100%;
 }
 
 .background-1{
-  background: url('Grass1.png') repeat-x;
+  background: url('Grass1.png') center repeat-x;
   position: absolute;
-  width: 100%;
+  width: 130%;
   height: 50%;
   z-index: 0;
-  top: 0%;
+  top: 3%;
   left: 0%;
 }
 
 .background-2{
-  background: url('Grass2.png') repeat-x;
+  background: url('Grass2.png') center repeat-x;
   position: absolute;
-  width: 100%;
+  width: 150%;
   height: 50%;
-  z-index: -1;
-  top: 0%;
-  left: 2%;
+  z-index: 0;
+  top: 27%;
+  left: 0%;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
 }
 
 .road{
   background: url('Road.png') repeat-x;
   position: absolute;
-  width: 100%;
+  width: 150%;
   height: 100%;
   z-index: 0;
-  top: -4%;
+  top: -6%;
   left: 0%;
 }
 
 .sun{
-  background: url('TheSun.png') no-repeat;
+  background: url('TheSun.png') center no-repeat;
   position: absolute;
+  padding: 1% 0 0 15%;
   width: 100%;
-  height: 300%;
-  z-index: 0;
-  top: 5%;
-  left: 10%;
+  height: 100%;
+  z-index: 15;
+  top: -40%;
+  left: 0%;
 }
+
 
 .cloud{
   background: url('Cloud.png') no-repeat;
   position: absolute;
   width: 100%;
-  height: 300%;
-  z-index: 0;
+  height: 100%;
+  z-index: 1;
   top: 10%;
   left: 0%;
 }
 
 .cloud2{
-  background: url('Cloud.png') no-repeat;
+  background: url('Cloud.png') center no-repeat;
   position: absolute;
   width: 100%;
-  height: 300%;
-  z-index: 0;
-  top: 0%;
-  left: 45%;
+  height: 100%;
+  z-index: 20;
+  top: -40%;
+  left: 0%;
+  overflow: auto;
 }
 
 .cloud3{
-  background: url('Cloud.png') no-repeat;
+  background: url('Cloud.png') center no-repeat;
   position: absolute;
+  padding: 8% 0 0 40%;
   width: 100%;
-  height: 300%;
-  z-index: 0;
-  top: 7%;
-  left: 90%;
+  height: 100%;
+  z-index: 20;
+  top: -40%;
+  left: 0%;
+  overflow: auto;
 }
 
 .car{
@@ -112,9 +128,20 @@ body{
 
 
 @-webkit-keyframes background{
-  0%{background-position:;}
-  60%{ opacity: 1;}
-  100%{-webkit-transform: translate(-15%, -15%) rotateZ(20deg);}
+  100%{background-position: -300%;}
+}
+
+
+@-webkit-keyframes background-grass{
+  100%{background-position: -800% }
+}
+
+@-webkit-keyframes background-clouds{
+  100%{background-position: -200% }
+}
+
+@-webkit-keyframes background-ground{
+  100%{background-position: -600%}
 }
 
 //animations
@@ -124,4 +151,28 @@ body{
 
 .car::after{
   -webkit-animation: gas-burn 3s 2s ease-in-out infinite;
+}
+
+.background-1{
+  -webkit-animation: background-grass 200s ease-in-out infinite;
+}
+
+.cloud{
+  -webkit-animation: background 200s ease-in-out infinite;
+}
+
+.cloud2{
+  -webkit-animation: background-clouds 175s ease-in-out infinite;
+}
+
+.cloud3{
+  -webkit-animation: background 140s ease-in-out infinite;
+}
+
+.sun{
+  -webkit-animation: background 200s ease-in-out infinite;
+}
+
+.road{
+  -webkit-animation: background-ground 60s ease-out infinite;
 }
