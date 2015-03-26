@@ -1,3 +1,86 @@
 // Place all the styles related to the animate controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import 'colors';
+
+body{
+  background: url('TheSky.png');
+  z-index: -2;
+}
+
+.background-1{
+  background: url('Grass1.png') repeat-x;
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  z-index: 0;
+  top: 0%;
+  left: 0%;
+}
+
+.background-2{
+  background: url('Grass2.png') repeat-x;
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  z-index: -1;
+  top: 0%;
+  left: 2%;
+}
+
+.road{
+  background: url('Road.png') repeat-x;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  top: -4%;
+  left: 0%;
+}
+
+.sun{
+  background: url('TheSun.png') no-repeat;
+  position: absolute;
+  width: 100%;
+  height: 300%;
+  z-index: 0;
+  top: 5%;
+  left: 10%;
+}
+
+.cloud{
+  background: url('Cloud.png') no-repeat;
+  position: absolute;
+  width: 100%;
+  height: 300%;
+  z-index: 0;
+  top: 10%;
+  left: 0%;
+}
+
+.cloud2{
+  background: url('Cloud.png') no-repeat;
+  position: absolute;
+  width: 100%;
+  height: 300%;
+  z-index: 0;
+  top: 0%;
+  left: 35%;
+}
+
+.cloud3{
+  background: url('Cloud.png') no-repeat;
+  position: absolute;
+  width: 100%;
+  height: 300%;
+  z-index: 0;
+  top: 7%;
+  left: 75%;
+}
+
+.car{
+  position: absolute;
+  top: 40%;
+  left: 35%;
+  z-index: 2;
+}
