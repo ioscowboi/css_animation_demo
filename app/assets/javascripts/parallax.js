@@ -1,8 +1,9 @@
-function parallax(){
+window.onload= function(){
+  function parallax(){
   var cloud = document.getElementById('cloud');
   var cloud1 = document.getElementById('cloud1');
   var cloud2 = document.getElementById('cloud2');
-  var sun = document.getElementById('heartbeater2');
+  var sun = document.getElementById('sun');
   var road = document.getElementById('road');
   var car = document.getElementById('car');
   var background1 = document.getElementById('background-1');
@@ -17,3 +18,4 @@ function parallax(){
   background2.style.top = -(window.pageYOffset / 6)+'px';
 }
 window.addEventListener("scroll", parallax, false);
+}
