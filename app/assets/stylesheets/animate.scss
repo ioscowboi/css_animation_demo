@@ -58,7 +58,7 @@ body{
 
 h1{
   margin: 5px auto;
-  font-family: $mont;
+  font-family: $michroma;
   color: $crisp-white;
   font-size: 200px;
 }
@@ -192,11 +192,14 @@ ul li{
 }
 
 @-webkit-keyframes background-clouds{
-  100%{background-position: -200% }
+  0%{opacity: 0;}
+  1%{opacity: 1;}
+  90%{opacity: 1;}
+  100%{background-position: -200%; opacity: 0; }
 }
 
 @-webkit-keyframes background-ground{
-  100%{background-position: -600%}
+  100%{background-position: -1000%}
 }
 
 //animations
@@ -213,7 +216,7 @@ ul li{
 }
 
 .cloud{
-  -webkit-animation: background 200s ease-in-out infinite;
+  -webkit-animation: background-clouds 200s ease-in-out infinite;
 }
 
 .cloud2{
@@ -221,7 +224,7 @@ ul li{
 }
 
 .cloud3{
-  -webkit-animation: background 140s ease-in-out infinite;
+  -webkit-animation: background-clouds 140s ease-in-out infinite;
 }
 
 .sun{

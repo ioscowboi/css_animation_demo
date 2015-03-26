@@ -1,5 +1,6 @@
 window.onload= function(){
   function parallax(){
+  var well = document.getElementById('welcs');
   var cloud = document.getElementById('cloud');
   var cloud1 = document.getElementById('cloud1');
   var cloud2 = document.getElementById('cloud2');
@@ -16,6 +17,7 @@ window.onload= function(){
   car.style.top = -(window.pageYOffset)+'px';
   background1.style.top = -(window.pageYOffset / 3)+'px';
   background2.style.top = -(window.pageYOffset / 6)+'px';
+  well.style.top = -(window.pageYOffset / 6)+'px'; 
 }
 window.addEventListener("scroll", parallax, false);
 }
